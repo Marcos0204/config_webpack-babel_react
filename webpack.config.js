@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/index.js',  // Elegimos nuestro punto de entrada
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].[contenthash].js'
   },  // Añadimos nuestro punto de salida
   resolve: {
     extensions: ['.js', '.jsx']  // Añadimos el soporte para la extencion de JSX
