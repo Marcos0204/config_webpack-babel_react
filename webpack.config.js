@@ -7,10 +7,13 @@ module.exports = {
   entry: './src/index.js',  // Elegimos nuestro punto de entrada
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[contenthash].js'
+    filename: '[name].js'
   },  // Añadimos nuestro punto de salida
   resolve: {
-    extensions: ['.js', '.jsx']  // Añadimos el soporte para la extencion de JSX
+    extensions: ['.js', '.jsx'],  // Añadimos el soporte para la extencion de JSX
+    alias:{
+      '@components' : path.resolve(__dirname, 'src/components/')
+    }
   },
   module: {
     rules: [
