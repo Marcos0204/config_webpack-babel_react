@@ -9,7 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },  // Añadimos nuestro punto de salida
-  watch: true,
+  // watch: true,
   resolve: {
     extensions: ['.js', '.jsx'],  // Añadimos el soporte para la extencion de JSX
     alias:{
@@ -49,10 +49,11 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
     historyApiFallback: true,
+    open:true,
     port: 3006,
+    compress: true,
+    static: './dist',
   },
 
 };

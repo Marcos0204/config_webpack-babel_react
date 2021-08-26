@@ -5,7 +5,7 @@ const App = () => {
     console.log('hola')
     return (
         <div>
-            <h1>Hola mundo Cruel...</h1>
+            <h1 style={{color:'red'}}>Hola mundo Cruel...</h1>
             <HelloComponents/>
         </div>
     )
