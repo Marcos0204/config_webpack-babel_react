@@ -9,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },  // Añadimos nuestro punto de salida
+  watch: true,
   resolve: {
     extensions: ['.js', '.jsx'],  // Añadimos el soporte para la extencion de JSX
     alias:{
@@ -46,5 +47,12 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin()
     ]
-  }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    historyApiFallback: true,
+    port: 3006,
+  },
+
 };
